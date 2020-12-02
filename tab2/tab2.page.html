@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Stats
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-text-center">Stats</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>Workouts</ion-label>
+    <ion-select interface="popover" (ionChange)='selectHandler($event.target.value)'>
+      <ion-select-option  *ngFor="let item of barData"  value={{item.title}} >{{item.title}}</ion-select-option>
+     </ion-select>
+  </ion-item>
+  <div style="display: grid; align-self: center; align-items: center;">
+  
+  
+ 
+    <div  id="chart1">
+
+    </div>
+    
+  </div>
+</ion-content>

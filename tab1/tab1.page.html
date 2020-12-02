@@ -1,0 +1,42 @@
+<ion-header [translucent]="true"  style="border-radius: 5px;">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+    Fit Log
+    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-text-center">Fit Log</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div class="card-container" style=" display: grid; grid-template-columns: 1fr 1fr;">
+    <ion-card   *ngFor="let w of workouts" (click)="goTo(w.title)"  style="cursor: pointer; height: 150px; display: grid; grid-template-columns: 2fr 1fr;" >
+      <div class="ion-text-center" style="display: grid; align-items: center; justify-items: center;">
+        <h1>{{w.title}}</h1>
+        <ion-progress-bar color="success"></ion-progress-bar>
+      </div >
+      <div style="display: grid; align-items: center; justify-items: center; background-color: #aaa">
+        <ion-icon size="large" name="barbell-outline"></ion-icon>
+  
+      </div>
+           
+     
+         
+    
+   
+    </ion-card>
+    
+
+  </div>
+ 
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed" (click)="showModal()">
+    <ion-fab-button color="dark">
+      <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

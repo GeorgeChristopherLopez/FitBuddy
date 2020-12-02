@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Add Workout Card</ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-item>
+      <ion-label  position="floating"><h1>Workout Title</h1></ion-label>
+      <ion-input id="name"></ion-input>
+    
+
+    </ion-item>
+  </ion-list>
+ 
+  <ion-button  (click)='submit()' style='float: right;'>Add</ion-button>  
+  <ion-button color="danger" (click)='cancel()' style='float: right;'>Canel</ion-button>  
+
+</ion-content>
