@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>addExerice</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin">
+  
+    <ion-item>
+      <ion-label  position="floating"><h1>Exercise Name</h1></ion-label>
+      <ion-input id="name"></ion-input>
+    
+
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating"><h1>Sets</h1></ion-label>
+      <ion-input type="number" id="sets"></ion-input>
+    
+
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating"><h1>Reps</h1></ion-label>
+      <ion-input id="reps"></ion-input>
+    
+
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating"><h1>Weight</h1></ion-label>
+      <ion-input id="weight"></ion-input>
+    
+
+    </ion-item>
+  </ion-list>
+ 
+  <ion-button  (click)='submit()' style='float: right;'>Add</ion-button>  
+  <ion-button color="danger" (click)='cancel()' style='float: right;'>Canel</ion-button>  
+
+</ion-content>
